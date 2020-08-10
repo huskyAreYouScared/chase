@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/huskyAreYouScared/chase/compare/v0.1.0...v0.1.1) (2020-08-10)
+
+
+### Features
+
+* **screen、iohook、main.vue:** change the logic of interactive special effects ([14b24e9](https://github.com/huskyAreYouScared/chase/commit/14b24e9593729b1ce48c6f2f9fe4a5a795565bd1))
+
+
+
 # 0.1.0 (2020-08-10)
 
 
