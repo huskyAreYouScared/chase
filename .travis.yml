@@ -1,0 +1,36 @@
+osx_image: xcode10.2
+sudo: required
+dist: bionic
+language: c
+matrix:
+  include:
+  - os: osx
+  # - os: linux
+    env: CC=clang CXX=clang++ npm_config_clang=1
+    compiler: clang
+cache:
+  directories:
+  - node_modules
+  - "$HOME/.electron"
+  - "$HOME/.cache"
+addons:
+  apt:
+    packages:
+    - libgnome-keyring-dev
+    - icnsutils
+  snaps:
+    - name: aws-cli
+      confinement: classic
+      channel: edge
+install:
+- nvm install 12
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- source ~/.bashrc
+- npm install -g xvfb-maybe
+- yarn
+script:
+#- yarn run build
+- npm run release
+branches:
+  only:
+  - master

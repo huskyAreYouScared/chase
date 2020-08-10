@@ -1,0 +1,51 @@
+{
+  "id": "1937278",
+  "name": "husky-surpass",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6978146",
+      "name": "加密",
+      "font_class": "jiami",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "11249689",
+      "name": "colors",
+      "font_class": "colors",
+      "unicode": "e838",
+      "unicode_decimal": 59448
+    },
+    {
+      "icon_id": "1048851",
+      "name": "消息",
+      "font_class": "icon_msg",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5677949",
+      "name": "消息",
+      "font_class": "xiaoxi_",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "6865357",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "13646879",
+      "name": "消息",
+      "font_class": "xiaoxi1",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    }
+  ]
+}
