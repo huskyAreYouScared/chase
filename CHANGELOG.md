@@ -1,3 +1,12 @@
+# 0.1.0 (2020-08-10)
+
+
+### Features
+
+* **all file:** mouse special effects basic version finished ([cfdcbd6](https://github.com/huskyAreYouScared/chase/commit/cfdcbd623303685afdab0b1872248eaa45f86ae0))
+
+
+
 ## [0.1.5](https://github.com/huskyAreYouScared/fly-key/compare/v0.1.0...v0.1.5) (2020-07-14)
 
 
