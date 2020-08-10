@@ -8,9 +8,8 @@ import {
   startIoHook
 } from './iohook'
 import { setWindowBound } from './screen'
-// const path = require('path')
-
-// import ioHook from 'iohook'
+import { appIcon } from './tray'
+import { setMenu } from './menu'
 /**
  * Set `__static` path to static files in production
  * https:/ks.io/electron-vue/content/en/using-/simulatedgreg.gitboostatic-assets.html
@@ -66,6 +65,9 @@ function createWindow () {
     destoryIoHook()
   })
   setWindowBound(mainWindow)
+
+  // set tray
+  appIcon.setContextMenu(setMenu(mainWindow))
 }
 
 // app.allowRendererProcessReuse = false

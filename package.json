@@ -55,16 +55,38 @@
       ]
     },
     "mac": {
-      "icon": "build/icons/icon.icns"
+      "icon": "build/icons/icon.icns",
+      "extraResources": {
+        "from": "./dist/web",
+        "to": "./",
+        "filter": [
+          "**/*"
+        ]
+      }
     },
     "win": {
-      "icon": "build/icons/icon.ico"
+      "icon": "build/icons/icon.ico",
+      "extraResources": {
+        "from": "./dist/web",
+        "to": "./",
+        "filter": [
+          "**/*"
+        ]
+      }
     },
     "linux": {
-      "icon": "build/icons"
+      "icon": "build/icons",
+      "extraResources": {
+        "from": "./dist/web",
+        "to": "./",
+        "filter": [
+          "**/*"
+        ]
+      }
     }
   },
   "dependencies": {
+    "app-root-dir": "^1.0.2",
     "iohook": "^0.6.5",
     "node-abi": "^2.18.0",
     "proton-engine": "^4.1.5",
