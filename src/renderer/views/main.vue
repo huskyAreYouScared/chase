@@ -29,8 +29,8 @@ export default {
   methods: {
     init () {
       this.canvasEl = this.$refs.canvas
-      this.canvasEl.width = 200
-      this.canvasEl.height = 200
+      this.canvasEl.width = window.innerWidth
+      this.canvasEl.height = window.innerHeight
       if (localStorage.getItem('background')) {
         document.documentElement.style.setProperty('--bg', localStorage.getItem('background'))
       }
@@ -61,10 +61,13 @@ export default {
     }
   },
   mounted () {
-    ipcRenderer.on('keyboard-change', (event, data) => {
-      this.emitter.p.x = 100
-      this.emitter.p.y = 100
-      this.emitter.emit('once')
+    ipcRenderer.on('keyboard-change', (...args) => {
+      let data = args[1]
+      if (data.type === 'mousedown') {
+        this.emitter.p.x = data.x
+        this.emitter.p.y = data.y
+        this.emitter.emit('once')
+      }
     })
     // init style
     this.init()
@@ -76,8 +79,8 @@ export default {
 .mouse-decorator{
   filter: saturate(200%);
   opacity: var(--opacity);
-  width: var(--windowWidth);
-  height: var(--windowWidth);
+  width: var(--commonWidth);
+  height: var(--commonHeight);
   box-sizing: border-box;
   border-radius: 10px;
   display: flex;

@@ -7,7 +7,7 @@ import {
   registerMouseMove,
   startIoHook
 } from './iohook'
-
+import { setWindowBound } from './screen'
 // const path = require('path')
 
 // import ioHook from 'iohook'
@@ -29,17 +29,13 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    maxHeight: 200,
-    maxWidth: 200,
-    width: 200,
-    height: 200,
-    minHeight: 200,
-    minWidth: 200,
     show: true,
     frame: false,
-    fullscreenable: false,
     skipTaskbar: true,
-    resizable: false,
+    // fullscreen: true,
+    height: 563,
+    useContentSize: true,
+    width: 1000,
     transparent: process.platform !== 'linux',
     webPreferences: {
       backgroundThrottling: false,
@@ -69,12 +65,7 @@ function createWindow () {
     mainWindow = null
     destoryIoHook()
   })
-  let webContents = mainWindow.webContents
-  webContents.on('did-finish-load', () => {
-    webContents.setZoomFactor(1)
-    webContents.setVisualZoomLevelLimits(1, 1)
-    webContents.setLayoutZoomLevelLimits(0, 0)
-  })
+  setWindowBound(mainWindow)
 }
 
 // app.allowRendererProcessReuse = false
