@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'fly-key'
+    name: 'chase'
   }
 </script>
 
